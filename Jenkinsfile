@@ -9,7 +9,7 @@ pipeline{
             steps{
                 // mvn test
                 cleanWs()
-                deleteDir()
+            
                 sh 'mvn test'
                 
             }
