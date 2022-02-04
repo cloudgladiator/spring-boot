@@ -8,6 +8,8 @@ pipeline{
         stage("Test"){
             steps{
                 // mvn test
+                cleanWs()
+                deleteDir()
                 sh 'mvn test'
                 
             }
