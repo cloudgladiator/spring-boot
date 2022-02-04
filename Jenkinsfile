@@ -1,14 +1,15 @@
 pipeline{
     agent any
     tools {
-        maven 'Maven' 
+           cleanWs()
+           maven 'Maven' 
     }
-
+ 
     stages{
         stage("Test"){
             steps{
                 // mvn test
-                cleanWs()
+             
             
                 sh 'mvn test'
                 
